@@ -1,0 +1,19 @@
+{
+  "name": "interactive-chat-widgets",
+  "version": "0.0.1",
+  "description": "A framework to create interactive widgets that overlay popular video chat platforms",
+  "main": "src/main.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5"
+  }
+}
