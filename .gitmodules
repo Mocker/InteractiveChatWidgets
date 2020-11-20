@@ -1,0 +1,3 @@
+[submodule "Client/src/lib/chalktalk"]
+	path = Client/src/lib/chalktalk
+	url = git@github.com:Mocker/chalktalk.git
