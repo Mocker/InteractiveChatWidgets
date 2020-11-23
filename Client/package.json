@@ -8,7 +8,9 @@
     "prestart": "npm run build",
     "start": "electron src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch src/*.js --exec electron src/main.js"
+    "dev": "set NODE_ENV=development&&electron .",
+    "tsnd": "tsnd --respawn src/main.ts",
+    "devmon": "nodemon --watch src/*.js --exec electron src/main.js"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,8 @@
   },
   "devDependencies": {
     "electron": "^10.1.5",
-    "nodemon": "^2.0.6"
+    "electron-reloader": "^1.0.1",
+    "nodemon": "^2.0.6",
+    "ts-node-dev": "^1.0.0"
   }
 }

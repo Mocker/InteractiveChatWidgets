@@ -2,6 +2,19 @@ const { app, BrowserWindow, remote, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
+//hot reload setup for development
+const env = process.env.NODE_ENV || 'development'; 
+
+if (env === 'development') { 
+  try { 
+      require('electron-reloader')(module, { 
+          debug: true, 
+          watchRenderer: true
+      }); 
+  } catch (_) { console.log('Error'); }     
+} 
+
+
 //create temporary websocket server based off chalktalk server.js
 //TODO:: instead of websockets this should use electron communication
 /*
@@ -84,8 +97,9 @@ function createWindow () {
   return new BrowserWindow({
   width: 800,
   height: 600,
-  frame: false,
+  frame: true,
   transparent: true,
+  fullscreen: true,
   webPreferences: {
     nodeIntegration: true
   }
