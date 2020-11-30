@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Electron Main",
+            "program": "${workspaceFolder}\\InteractiveChatWidgets\\Client\\src\\main.ts",
+            "cwd": "${workspaceFolder}\\InteractiveChatWidgets\\Client",
+            "env": {
+                "ELECTRON_ENABLE_LOGGING": "true",
+                "NODE_ENV": "development"
+            },
+            "preLaunchTask": "Build TSC",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}\\InteractiveChatWidgets\\Client\\node_modules\\electron\\dist\\electron.exe",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+    ]
+}
