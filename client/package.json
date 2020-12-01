@@ -1,0 +1,52 @@
+{
+  "name": "interactive-chat-widgets",
+  "version": "0.0.1",
+  "description": "A framework to create interactive widgets that overlay popular video chat platforms",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc src/main.ts",
+    "prestart": "npm run build",
+    "start": "electron src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&&electron .",
+    "tsnd": "tsnd --respawn src/main.ts",
+    "devmon": "nodemon --watch src/*.ts --watch src/lib/ --exec tsc src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^4.5.9",
+    "body-parser": "^1.19.0",
+    "bootstrap-icons": "^1.1.0",
+    "chalktalk": "kenperlin/chalktalk",
+    "chart.js": "^2.9.4",
+    "dgram": "^1.0.1",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.5.1",
+    "vue-i18n": "^8.22.2",
+    "vue-router": "^3.4.9",
+    "vue-router-prefetch": "^1.6.0",
+    "vue2-transitions": "^0.3.0",
+    "ws": "^7.4.0"
+  },
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-reloader": "^1.0.1",
+    "nodemon": "^2.0.6",
+    "ts-node-dev": "^1.0.0",
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "^1.0.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
