@@ -78,6 +78,10 @@ function init () {
   ipcMain.handle('get_collections', async (event: any, arg: any) => {
     console.log("GETTING COLLECTIONS");
   });
+  ipcMain.handle('get_collection', async (event: any, name: any) => {
+    console.log("GETTING COLLECTION", name);
+    return await fs.readFileSync(path.resolve(process.cwd(), 'src/lib/chalktalk/state/collections/'+name+'.json'), {encoding:'utf8', flag:'r'});
+  });
   //TODO:: need to actually save the collection
   ipcMain.handle('set_collections', async (event: any, collections: any) => {
     console.log("SET COLLECTION", collections);

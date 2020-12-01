@@ -145,6 +145,16 @@ function init() {
             return [2 /*return*/];
         });
     }); });
+    ipcMain.handle('get_collection', function (event, name) { return __awaiter(_this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    console.log("GETTING COLLECTION", name);
+                    return [4 /*yield*/, fs.readFileSync(path.resolve(process.cwd(), 'src/lib/chalktalk/state/collections/' + name + '.json'), { encoding: 'utf8', flag: 'r' })];
+                case 1: return [2 /*return*/, _a.sent()];
+            }
+        });
+    }); });
     //TODO:: need to actually save the collection
     ipcMain.handle('set_collections', function (event, collections) { return __awaiter(_this, void 0, void 0, function () {
         var filePath;

@@ -2,7 +2,8 @@
   "name": "interactive-chat-widgets",
   "version": "0.0.1",
   "description": "A framework to create interactive widgets that overlay popular video chat platforms",
-  "main": "src/main.ts",
+  "main": "src/main.js",
+  "productName": "Digital Chalk",
   "scripts": {
     "build": "tsc src/main.ts",
     "prestart": "npm run build",
@@ -36,16 +37,17 @@
     "ws": "^7.4.0"
   },
   "devDependencies": {
-    "electron": "^10.1.5",
-    "electron-reloader": "^1.0.1",
-    "nodemon": "^2.0.6",
-    "ts-node-dev": "^1.0.0",
     "@vue/cli-plugin-babel": "^4.4.6",
     "@vue/cli-plugin-eslint": "^4.4.6",
     "@vue/cli-plugin-pwa": "^4.4.6",
     "@vue/cli-service": "^4.4.6",
+    "electron": "^10.1.5",
+    "electron-packager": "^15.1.0",
+    "electron-reloader": "^1.0.1",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.6",
     "sass-loader": "^8.0.2",
+    "ts-node-dev": "^1.0.0",
     "vue-cli-plugin-i18n": "^1.0.1",
     "vue-template-compiler": "^2.6.11"
   }
